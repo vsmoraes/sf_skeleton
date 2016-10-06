@@ -1,0 +1,12 @@
+imports:
+    - { resource: ../parameters.yml }
+    - { resource: services.yml }
+
+parameters:
+    locale: en
+
+framework:
+    secret:          "%secret%"
+    router:
+        resource: "%kernel.root_dir%/config/common/routing.yml"
+        strict_requirements: ~

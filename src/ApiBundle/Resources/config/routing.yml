@@ -1,0 +1,5 @@
+hello_world:
+    path: /
+    methods: [GET]
+    defaults:
+        _controller: api.controller.default:helloWorld
