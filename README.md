@@ -9,7 +9,7 @@ This distribution comes with docker configurations for local environments. In or
 
 ## Installation
 ```
-composer create-project vsmoraes/sf_skeleton -s dev
+composer create-project vsmoraes/sf_skeleton
 ```
 
 ## Features
