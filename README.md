@@ -7,6 +7,11 @@ This distribution comes with docker configurations for local environments. In or
   * [docker](https://docs.docker.com/engine/installation/)
   * [docker-compose](https://docs.docker.com/compose/install/)
 
+## Installation
+```
+composer create-project vsmoraes/sf_skeleton -s dev
+```
+
 ## Features
 
   * Clean symfony installation
