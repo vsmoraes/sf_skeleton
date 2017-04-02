@@ -6,7 +6,32 @@ parameters:
     locale: en
 
 framework:
-    secret:          "%secret%"
+    secret: "%secret%"
     router:
         resource: "%kernel.root_dir%/config/common/routing.yml"
         strict_requirements: ~
+
+monolog:
+    handlers:
+        main:
+            type: stream
+            path:  "%kernel.logs_dir%/%kernel.environment%.log"
+            formatter: monolog.formatter.logstash
+
+ekino_new_relic:
+    enabled: true
+    application_name: "%new_relic.application_name%"
+    deployment_names: ~
+    api_key:
+    license_key: "%new_relic.license_key%"
+    xmit: false
+    logging: "%kernel.debug%"
+    instrument: false
+    log_exceptions: false
+    log_commands: true
+    using_symfony_cache: false
+    transaction_naming: route
+    transaction_naming_service: ~
+    ignored_routes: []
+    ignored_paths: []
+    ignored_commands: []

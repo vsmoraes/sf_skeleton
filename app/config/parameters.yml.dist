@@ -1,3 +1,5 @@
 # Add the config placeholders here
 parameters:
-    secret: %secret%
+    secret: "%secret%"
+    new_relic.application_name: "%new_relic.application_name%"
+    new_relic.license_key: "%new_relic.license_key%"
