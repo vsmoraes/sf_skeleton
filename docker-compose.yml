@@ -1,0 +1,32 @@
+api-fpm:
+    build: ./env/
+    container_name: api_fpm
+    volumes:
+        - ./:/api
+    environment:
+        XDEBUG_CONFIG: 'idekey=PHPSTORM remote_host=10.254.254.254'
+        PHP_IDE_CONFIG: 'serverName=api.dev'
+
+api-nginx:
+    image: nginx:stable-alpine
+    container_name: api_nginx
+    environment:
+        - VIRTUAL_HOST=api.dev
+    volumes:
+        - ./env/config/api.nginx.conf:/etc/nginx/conf.d/default.conf
+    volumes_from:
+        - api-fpm
+    links:
+        - api-fpm
+
+api-elk:
+    image: sebp/elk
+    container_name: api_elk
+    ports:
+        - "5601:5601"
+    environment:
+        TERM: linux
+    volumes:
+        - ./env/config/logstash.conf:/etc/logstash/conf.d/logstash.conf
+    volumes_from:
+        - api-fpm

@@ -1,8 +1,8 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "vsmoraes/sf_skeleton",
     "license": "MIT",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "description": "A modification to the \"Symfony Standard Edition\" distribution to make it little and API friendly.",
     "autoload": {
         "psr-4": {
             "": "src/"
