@@ -3,6 +3,7 @@
     "license": "MIT",
     "type": "project",
     "description": "A modification to the \"Symfony Standard Edition\" distribution to make it little and API friendly.",
+    "keywords": ["symfony", "framework", "api", "skeleton"],
     "autoload": {
         "psr-4": {
             "": "src/"
@@ -56,5 +57,10 @@
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
         }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
     }
 }
