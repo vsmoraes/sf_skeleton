@@ -20,6 +20,19 @@ composer create-project vsmoraes/sf_skeleton -s dev
   * Docker local environment
   * Makefile to make your life a little easier
 
+## Local environment
+To start the local environment, run:
+```
+make start
+```
+
+This command will start all the containers (fpm, nginx and elk). To access the application for the first time, you'll need to add the following line to your `/etc/hosts` file:
+```
+127.0.0.1 api.dev
+```
+
+Don't worry, it's just mapping the host `api.dev` to your localhost IP address. Now you can access the application using the browser of your choice using the address: `http://api.dev`.
+
 ## Commands
 Install dependencies:
 ```

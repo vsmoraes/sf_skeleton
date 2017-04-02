@@ -16,6 +16,8 @@ api-nginx:
         - ./env/config/api.nginx.conf:/etc/nginx/conf.d/default.conf
     volumes_from:
         - api-fpm
+    ports:
+        - "80:80"
     links:
         - api-fpm
 
